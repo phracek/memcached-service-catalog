@@ -1,0 +1,8 @@
+apiVersion: servicecatalog.k8s.io/v1alpha1
+kind: Binding
+metadata:
+  name: memcached-binding
+spec:
+  instanceRef:
+    name: memcached-instance
+  secretName: memcached-instance-credentials

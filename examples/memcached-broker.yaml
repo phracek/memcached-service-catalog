@@ -1,0 +1,6 @@
+apiVersion: servicecatalog.k8s.io/v1alpha1
+kind: Broker
+metadata:
+  name: memcached-broker
+spec:
+  url: http://memcached-broker-memcached-broker.memcached-broker.svc.cluster.local

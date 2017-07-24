@@ -5,30 +5,30 @@ This is an implementation of a Service Broker for memcached. This is a **proof-o
 
 ## Prerequisites
 
-1. OpenShift at least 3.6.rc0 ([OpenShift origin v3.6.0-rc.0](https://github.com/openshift/origin/releases/tag/v3.6.0-rc.0))
+1. At least OpenShift 3.6.rc0 ([OpenShift origin v3.6.0-rc.0](https://github.com/openshift/origin/releases/tag/v3.6.0-rc.0)) and unpack it.
 
 ## Run OpenShift with Service Catalog
 
-To run OpenShift with Service Catalog, run oc:
+To run OpenShift with Service Catalog switch to directory where it is unpacked, run a command:
 
 ```
-$ sudo oc cluster up --service-catalog=true --loglevel=2
+$ sudo ./oc cluster up --service-catalog=true --loglevel=2
 ```
 
 Switch to system user:
 
 ```
-$ sudo oc login -u system:admin
+$ sudo ./oc login -u system:admin
 ```
 
 To grant unauthenticated access to the template service broker api, run:
 ```
-$ sudo oc adm policy add-cluster-role-to-group system:openshift:templateservicebroker-client system:unauthenticated system:authenticated
+$ sudo ./oc adm policy add-cluster-role-to-group system:openshift:templateservicebroker-client system:unauthenticated system:authenticated
 ```
 
 To check whether we have service-catalog with all namespaces, run command:
 ```
-$ sudo oc get pods --all-namespaces
+$ sudo ./oc get pods --all-namespaces
 ```
 
 The output should be like:
@@ -44,7 +44,7 @@ service-catalog   controller-manager-1311218843-b1s4j   1/1       Running     1 
 
 Let's have a look what kind of services we have by default, run a command:
 ```
-$ sudo oc get serviceclasses --all-namespaces
+$ sudo ./oc get serviceclasses --all-namespaces
 
 ```
 
@@ -102,7 +102,7 @@ $
 
 To create an application from Service Catalog template, run a command:
 ```
-$ sudo oc new-app --template memcached
+$ sudo ./oc new-app --template memcached
 ```
 
 As soon as it is done, you should be able to see an output like:

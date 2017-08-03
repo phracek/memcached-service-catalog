@@ -1,0 +1,15 @@
+id: 90a8833a-72f7-4259-99bd-62685712c74b
+name: my-memcached-apb
+image: docker.io/phracek/my-memcached-apb
+description: Memcached apb implementation
+bindable: False
+async: optional
+metadata: 
+  documentationUrl: https://www.memcached.org
+  displayName: Memcached (APB)
+  longDescription: An apb that deplays memcached
+  
+parameters: []
+  
+required: []
+  

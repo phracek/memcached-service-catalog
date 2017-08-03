@@ -1,14 +1,28 @@
-id: 90a8833a-72f7-4259-99bd-62685712c74b
-name: my-memcached-apb
-image: docker.io/phracek/my-memcached-apb
-description: Memcached apb implementation
+apiVersion: servicecatalog.k8s.io/v1alpha1
 bindable: False
+kind: ServiceClass
+brokerName: ansible-service-broker
+description: my-memcached-apb description
+id: 90a8833a-72f7-4259-99bd-62685712c74b
+image: docker.io/phracek/my-memcached-apb
 async: optional
+externalID: 5c60cc71434bb0f9dc
+externalMetadata:
+  dependencies:
+  - docker.io/phracek/my-memcached-apb:latest
+  displayName: Memcached (APB)
+  documentationUrl: https://github.com/container-images/memcached
+  longDescription: Memcached apb implementation
 metadata: 
-  documentationUrl: https://www.memcached.org
+  name: my-memcached-apb
   displayName: Memcached (APB)
   longDescription: An apb that deplays memcached
-  
+plans:
+- description: Memcached apb implementation
+  externalID: default
+  free: true
+  name: default
+
 parameters: []
   
 required: []

@@ -8,8 +8,7 @@ image: docker.io/phracek/my-memcached-apb
 async: optional
 externalID: 5c60cc71434bb0f9dc
 externalMetadata:
-  dependencies:
-  - docker.io/phracek/my-memcached-apb:latest
+  dependencies: ['docker.io/phracek/my-memcached-apb:latest']
   displayName: Memcached (APB)
   documentationUrl: https://github.com/container-images/memcached
   longDescription: Memcached apb implementation
@@ -22,8 +21,4 @@ plans:
   externalID: default
   free: true
   name: default
-
-parameters: []
-  
-required: []
-  
+  parameters: []

@@ -29,8 +29,8 @@
       service: my-memcached-apb
     containers:
     - env:
-      image: docker.io/phracek/my-memcached-apb:latest # replace with your application image
-      name: my-memcached-apb
+      image: docker.io/modularitycontainers/memcached:latest # replace with your application image
+      name: memcached
       ports:
       - container_port: 11211
         protocol: TCP

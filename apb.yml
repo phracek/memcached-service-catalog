@@ -1,7 +1,7 @@
 name: my-memcached-apb
 image: docker.io/phracek/my-memcached-apb
 description: my-memcached-apb description
-bindable: False
+bindable: True
 async: optional
 metadata: 
   documentationUrl: https://github.com/container-images/memcached

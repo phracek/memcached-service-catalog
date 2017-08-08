@@ -1,3 +1,4 @@
+id: c4027c89-91a4-43fd-85b1-cae1bb4115b3
 name: my-memcached-apb
 image: docker.io/phracek/my-memcached-apb
 description: my-memcached-apb description
